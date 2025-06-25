@@ -1,8 +1,6 @@
 # QTrip Dynamic
 
-# Enterprise Decision Copilot 💼🤖
-
-An AI-powered enterprise assistant that helps users gain insights from unstructured documents. This project includes a **Node.js backend**, a **dynamic frontend**, and can be integrated with modern GenAI tools for enhanced automation.
+**QTrip - Dynamic** is a travel and adventure booking web application built as part of a full stack learning journey. This project showcases dynamic rendering using JavaScript, asynchronous API integration, responsive UI design, and reservation management.
 
 > 🚀 Project owned and developed by **Kiran**, restructured from scratch with full-stack enhancements.
 
