@@ -1,0 +1,17 @@
+__CRIO__/metadata.json merge=copy-merge
+frontend/__tests__/modules/landing_page.test.js merge=copy-merge
+frontend/__tests__/modules/adventures_page.test.js merge=copy-merge
+frontend/__tests__/modules/adventure_details_page.test.js merge=copy-merge
+frontend/__tests__/modules/reservation_page.test.js merge=copy-merge
+frontend/__tests__/pnpm-lock.yaml merge=ours
+frontend/__tests__/package-lock.json merge=ours
+frontend/__tests__/package.json merge=copy-merge 
+backend/pnpm-lock.yaml merge=ours
+backend/package-lock.json merge=ours
+backend/package.json merge=copy-merge 
+.gitattributes merge=copy-merge 
+.gitignore merge=copy-merge 
+
+# Eliminate merge conflicts where one side is empty
+frontend/modules/** merge=autoselect-nonempty
+frontend/pages/** merge=autoselect-nonempty

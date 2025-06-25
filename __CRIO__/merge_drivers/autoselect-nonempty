@@ -1,0 +1,35 @@
+#!/bin/bash
+echo "Executing autoselect-nonempty"
+
+ancestor="$1"  # %O - Common ancestor
+current="$2"   # %A - Our version
+other="$3"     # %B - Their version
+path="$4"
+
+# Create .git/MERGE_HEAD if it doesn't exist
+if [ ! -f ".git/MERGE_HEAD" ]; then
+    git rev-parse MERGE_HEAD > .git/MERGE_HEAD 2>/dev/null || true
+    if [ $? -eq 0 ]; then
+        echo "OK: MERGE_HEAD created successfully"
+    else
+        echo "Error: Failed to create MERGE_HEAD"
+    fi
+fi
+
+# Temporary file for merged output with conflicts
+merged=$(mktemp)
+
+# Generate merged content with conflict markers
+git merge-file -p --marker-size=7 -L ours -L base -L theirs "$current" "$ancestor" "$other" > "$merged"
+
+# echo "Merged content saved to: $merged"
+
+# Pass to autoselect_nonempty.py
+# Start of Selection
+# echo "Executing command: python3 __CRIO__/merge_drivers/src/autoselect_nonempty.py \"$merged\" \"$current\""
+python3 __CRIO__/merge_drivers/src/autoselect_nonempty.py "$merged" "$current" "$path"
+
+# End of Selection
+
+# Clean up temporary file
+rm "$merged"
