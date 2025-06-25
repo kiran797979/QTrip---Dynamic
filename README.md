@@ -56,11 +56,11 @@ npm install
 npm start
 Visit: http://localhost:3000 or the port you're using.
 
-### 🌐 Live Demo
+🌐 Live Demo
 [Live Demo](https://qtripdynamic-h5jf4cg3s-kirans-projects-abcb66a1.vercel.app/)
 Welcome to QTrip Dynamic! Explore the world through amazing adventures.
 
-### 📸 Screenshots
+📸 Screenshots
 (UI Preview from the deployed site)
 Welcome to QTrip Dynamic! Explore the world with fantastic places to venture around.
 
@@ -74,7 +74,7 @@ Welcome to QTrip Dynamic! Explore the world with fantastic places to venture aro
 
 
 
-### ✨ Features
+✨ Features
 
 🌆 Explore cities and view available adventures
 📅 Filter adventures by duration and category
